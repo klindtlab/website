@@ -23,7 +23,11 @@ layout: default
       {% endif %}
       
       {% if page.github %}
-        <a href="https://github.com/{{ page.github }}" class="contact-link" target="_blank">💻 GitHub</a>
+        <a href="https://github.com/{{ page.github }}" class="contact-link" target="_blank">💻 Personal GitHub</a>
+      {% endif %}
+      
+      {% if page.lab_github %}
+        <a href="https://github.com/{{ page.lab_github }}" class="contact-link" target="_blank">🧪 Lab GitHub</a>
       {% endif %}
       
       {% if page.twitter %}

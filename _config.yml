@@ -2,7 +2,7 @@ title: "Klindt Lab - NeuroAI Research"
 description: "Exploring the intersection of neuroscience and artificial intelligence"
 baseurl: "/website"
 url: "https://klindtlab.github.io"
-repository: "your-username/your-username.github.io"
+repository: "klindtlab/website"
 
 # Build settings
 markdown: kramdown
@@ -35,9 +35,9 @@ header_pages:
   - news.md
 
 # Social links
-github_username: your-lab-github
-twitter_username: your-lab-twitter
-email: contact@klindtlab.org
+github_username: klindtlab
+# twitter_username: # Lab doesn't have Twitter yet
+email: klindt@cshl.edu
 
 # Google Analytics (optional)
 # google_analytics: UA-XXXXXXXX-X

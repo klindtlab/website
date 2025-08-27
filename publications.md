@@ -15,27 +15,42 @@ permalink: /publications/
 
 {% for pub in site.publications %}
   {% if pub.year == year %}
-  ### {{ pub.title }}
-  **{{ pub.authors }}**  
-  {% if pub.journal %}*{{ pub.journal }}* ({{ pub.year }}){% endif %}
-  
-  {% if pub.abstract %}
-  <details>
-  <summary>Abstract</summary>
-  {{ pub.abstract }}
-  </details>
-  {% endif %}
-  
-  {% if pub.citations %}**Citations**: {{ pub.citations }}{% endif %}
-  
-  **Links**: 
-  {% if pub.url %}[Google Scholar]({{ pub.url }}){% endif %}
-  {% if pub.pdf %} • [PDF]({{ pub.pdf }}){% endif %}
-  {% if pub.doi %} • [DOI](https://doi.org/{{ pub.doi }}){% endif %}
-  {% if pub.arxiv %} • [arXiv](https://arxiv.org/abs/{{ pub.arxiv }}){% endif %}
-  {% if pub.code %} • [Code]({{ pub.code }}){% endif %}
-  
-  ---
+  <div class="publication-item">
+    <h3><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></h3>
+    <p class="authors">{{ pub.authors }}</p>
+    {% if pub.journal %}
+      <p class="journal"><em>{{ pub.journal }}</em> ({{ pub.year }})</p>
+    {% endif %}
+    
+    {% if pub.abstract %}
+    <details class="abstract-toggle">
+      <summary>Abstract</summary>
+      <p>{{ pub.abstract }}</p>
+    </details>
+    {% endif %}
+    
+    {% if pub.citations %}
+      <p class="citations"><strong>Citations</strong>: {{ pub.citations }}</p>
+    {% endif %}
+    
+    <div class="pub-links">
+      {% if pub.scholar_url %}
+        <a href="{{ pub.scholar_url }}" target="_blank">Google Scholar</a>
+      {% endif %}
+      {% if pub.pdf %}
+        <a href="{{ pub.pdf }}" target="_blank">PDF</a>
+      {% endif %}
+      {% if pub.doi %}
+        <a href="https://doi.org/{{ pub.doi }}" target="_blank">DOI</a>
+      {% endif %}
+      {% if pub.arxiv %}
+        <a href="https://arxiv.org/abs/{{ pub.arxiv }}" target="_blank">arXiv</a>
+      {% endif %}
+      {% if pub.code %}
+        <a href="{{ pub.code }}" target="_blank">Code</a>
+      {% endif %}
+    </div>
+  </div>
   {% endif %}
 {% endfor %}
 {% endfor %}

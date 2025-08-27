@@ -1,0 +1,102 @@
+---
+layout: default
+---
+
+<article class="publication">
+  <header class="publication-header">
+    <h1>{{ page.title }}</h1>
+    <div class="publication-meta">
+      <p class="authors">{{ page.authors }}</p>
+      {% if page.journal %}
+        <p class="journal"><em>{{ page.journal }}</em> ({{ page.year }})</p>
+      {% endif %}
+      {% if page.citations %}
+        <p class="citations">Citations: {{ page.citations }}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="publication-content">
+    {% if page.abstract %}
+      <h2>Abstract</h2>
+      <p class="abstract">{{ page.abstract }}</p>
+    {% endif %}
+    
+    {{ content }}
+  </div>
+
+  <div class="publication-links">
+    {% if page.url %}
+      <a href="{{ page.url }}" class="pub-link" target="_blank">Google Scholar</a>
+    {% endif %}
+    {% if page.pdf %}
+      <a href="{{ page.pdf }}" class="pub-link" target="_blank">PDF</a>
+    {% endif %}
+    {% if page.doi %}
+      <a href="https://doi.org/{{ page.doi }}" class="pub-link" target="_blank">DOI</a>
+    {% endif %}
+    {% if page.code %}
+      <a href="{{ page.code }}" class="pub-link" target="_blank">Code</a>
+    {% endif %}
+  </div>
+</article>
+
+<style>
+.publication {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.publication-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.publication-meta {
+  margin-top: 1rem;
+  color: #666;
+}
+
+.authors {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.journal {
+  margin: 0.25rem 0;
+}
+
+.citations {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.abstract {
+  font-style: italic;
+  line-height: 1.6;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.publication-links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.pub-link {
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+}
+</style>

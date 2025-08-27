@@ -42,7 +42,7 @@ def fetch_google_scholar_publications(scholar_id):
                 'year': pub_filled.get('bib', {}).get('pub_year', ''),
                 'abstract': pub_filled.get('bib', {}).get('abstract', ''),
                 'citations': pub_filled.get('num_citations', 0),
-                'url': pub_filled.get('pub_url', ''),
+                'scholar_url': pub_filled.get('pub_url', ''),
             }
             
             # Try to extract DOI if available
@@ -84,8 +84,10 @@ def create_publication_files(publications, output_dir):
             'year': pub['year'],
             'abstract': pub['abstract'],
             'citations': pub['citations'],
-            'url': pub['url'],
         }
+        
+        if 'scholar_url' in pub:
+            frontmatter['scholar_url'] = pub['scholar_url']
         
         if 'pdf' in pub:
             frontmatter['pdf'] = pub['pdf']
@@ -112,8 +114,8 @@ def update_publications_yaml(publications, yaml_file):
 def main():
     # Configuration
     SCHOLAR_ID = "EpT-nUAAAAAJ"  # David Klindt's Google Scholar ID
-    PUBLICATIONS_DIR = "_publications"
-    DATA_FILE = "_data/publications.yml"
+    PUBLICATIONS_DIR = "../_publications"
+    DATA_FILE = "../_data/publications.yml"
     
     print("Fetching publications from Google Scholar...")
     publications = fetch_google_scholar_publications(SCHOLAR_ID)
