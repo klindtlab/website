@@ -14,7 +14,7 @@ title: "Welcome to Klindt Lab"
       </div>
     </div>
     <div class="hero-image">
-      <img src="{{ '/assets/images/team/summer2025.jpeg' | relative_url }}" alt="Klindt Lab Team" class="team-photo">
+      <img src="{{ site.baseurl }}/assets/images/team/summer2025.jpeg" alt="Klindt Lab Team" class="team-photo">
       <p class="photo-caption">The Klindt Lab Team</p>
     </div>
   </div>
