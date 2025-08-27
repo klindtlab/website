@@ -1,0 +1,793 @@
+- abstract: Supervised learning has become a cornerstone of modern machine learning,
+    yet a comprehensive theory explaining its effectiveness remains elusive. Empirical
+    phenomena, such as neural analogy-making and the linear representation hypothesis,
+    suggest that supervised models can learn interpretable factors of variation in
+    a linear fashion. Recent advances in self-supervised learning, particularly nonlinear
+    Independent Component Analysis, have shown that these methods can recover latent
+    structures by inverting the data generating process. We extend these identifiability
+    results to parametric instance discrimination, then show how insights transfer
+    to the ubiquitous setting of supervised learning with cross-entropy minimization.
+    We prove that even in standard classification tasks, models learn representations
+    of ground-truth factors of variation up to a linear transformation. We corroborate
+    our theoretical contribution with a series of empirical studies. First, using
+    simulated data matching our theoretical assumptions, we demonstrate successful
+    disentanglement of latent factors. Second, we show that on DisLib, a widely-used
+    disentanglement benchmark, simple classification tasks recover latent structures
+    up to linear transformations. Finally, we reveal that models trained on ImageNet
+    encode representations that permit linear decoding of proxy factors of variation.
+    Together, our theoretical findings and experiments offer a compelling explanation
+    for recent observations of linear representations, such as superposition in neural
+    networks. This work takes a significant step toward a cohesive theory that accounts
+    for the unreasonable effectiveness of …
+  authors: Patrik Reizinger and Alice Bizeul and Attila Juhos and Julia E Vogt and
+    Randall Balestriero and Wieland Brendel and David Klindt
+  citations: 7
+  journal: ''
+  title: Cross-Entropy Is All You Need To Invert the Data Generating Process
+  url: https://arxiv.org/abs/2410.21869
+  year: 2025
+- abstract: Although individual neurons and neural populations exhibit the phenomenon
+    of representational drift, perceptual and behavioral outputs of many neural circuits
+    can remain stable across time scales over which representational drift is substantial.
+    These observations motivate a dynamical systems framework for neural network activity
+    that focuses on the concept of \emph{latent processing units,} core elements for
+    robust coding and computation embedded in collective neural dynamics. Our theoretical
+    treatment of these latent processing units yields five key attributes of computing
+    through neural network dynamics. First, neural computations that are low-dimensional
+    can nevertheless generate high-dimensional neural dynamics. Second, the manifolds
+    defined by neural dynamical trajectories exhibit an inherent coding redundancy
+    as a direct consequence of the universal computing capabilities of the underlying
+    dynamical system. Third, linear readouts or decoders of neural population activity
+    can suffice to optimally subserve downstream circuits controlling behavioral outputs.
+    Fourth, whereas recordings from thousands of neurons may suffice for near optimal
+    decoding from instantaneous neural activity patterns, experimental access to millions
+    of neurons may be necessary to predict neural ensemble dynamical trajectories
+    across timescales of seconds. Fifth, despite the variable activity of single cells,
+    neural networks can maintain stable representations of the variables computed
+    by the latent processing units, thereby making computations robust to representational
+    drift. Overall, our framework for latent computation provides an analytic description
+    and …
+  authors: Fatih Dinc and Marta Blanco-Pozo and David Klindt and Francisco Acosta
+    and Yiqi Jiang and Sadegh Ebrahimi and Adam Shai and Hidenori Tanaka and Peng
+    Yuan and Mark J Schnitzer and Nina Miolane
+  citations: 2
+  journal: ''
+  title: 'Latent computing by biological neural networks: A dynamical systems framework'
+  url: https://arxiv.org/abs/2502.14337
+  year: 2025
+- abstract: 'Self-Supervised Learning (SSL) powers many current AI systems. As research
+    interest and investment grow, the SSL design space continues to expand. The Platonic
+    view of SSL, following the Platonic Representation Hypothesis (PRH), suggests
+    that despite different methods and engineering approaches, all representations
+    converge to the same Platonic ideal. However, this phenomenon lacks precise theoretical
+    explanation. By synthesizing evidence from Identifiability Theory (IT), we show
+    that the PRH can emerge in SSL. However, current IT cannot explain SSL’s empirical
+    success. To bridge the gap between theory and practice, we propose expanding IT
+    into what we term Singular Identifiability Theory (SITh), a broader theoretical
+    framework encompassing the entire SSL pipeline. SITh would allow deeper insights
+    into the implicit data assumptions in SSL and advance the field towards learning
+    more interpretable and generalizable representations. We highlight three critical
+    directions for future research: 1) training dynamics and convergence properties
+    of SSL; 2) the impact of finite samples, batch size, and data diversity; and 3)
+    the role of inductive biases in architecture, augmentations, initialization schemes,
+    and optimizers.'
+  authors: Patrik Reizinger and Randall Balestriero and David Klindt and Wieland Brendel
+  citations: 1
+  journal: ''
+  title: An Empirically Grounded Identifiability Theory Will Accelerate Self-Supervised
+    Learning Research
+  url: http://203.160.84.158:9988/papers/2504.13101v1.An_Empirically_Grounded_Identifiability_Theory_Will_Accelerate_Self_Supervised_Learning_Research.pdf
+  year: 2025
+- abstract: 'Understanding how information is represented in neural networks is a
+    fundamental challenge in both neuroscience and artificial intelligence. Despite
+    their nonlinear architectures, recent evidence suggests that neural networks encode
+    features in superposition, meaning that input concepts are linearly overlaid within
+    the network''s representations. We present a perspective that explains this phenomenon
+    and provides a foundation for extracting interpretable representations from neural
+    activations. Our theoretical framework consists of three steps: (1) Identifiability
+    theory shows that neural networks trained for classification recover latent features
+    up to a linear transformation. (2) Sparse coding methods can extract disentangled
+    features from these representations by leveraging principles from compressed sensing.
+    (3) Quantitative interpretability metrics provide a means to assess the success
+    of these methods, ensuring that extracted features align with human-interpretable
+    concepts. By bridging insights from theoretical neuroscience, representation learning,
+    and interpretability research, we propose an emerging perspective on understanding
+    neural representations in both artificial and biological systems. Our arguments
+    have implications for neural coding theories, AI transparency, and the broader
+    goal of making deep learning models more interpretable.'
+  authors: David Klindt and Charles O'Neill and Patrik Reizinger and Harald Maurer
+    and Nina Miolane
+  citations: 1
+  journal: ''
+  title: 'From superposition to sparse codes: interpretable representations in neural
+    networks'
+  url: https://arxiv.org/abs/2503.01824
+  year: 2025
+- abstract: The rapid advancement of generative AI enables highly realistic synthetic
+    videos, posing significant challenges for content authentication and raising urgent
+    concerns about misuse. Existing detection methods often struggle with generalization
+    and capturing subtle temporal inconsistencies. We propose ReStraV(Representation
+    Straightening Video), a novel approach to distinguish natural from AI-generated
+    videos. Inspired by the "perceptual straightening" hypothesis -- which suggests
+    real-world video trajectories become more straight in neural representation domain
+    -- we analyze deviations from this expected geometric property. Using a pre-trained
+    self-supervised vision transformer (DINOv2), we quantify the temporal curvature
+    and stepwise distance in the model's representation domain. We aggregate statistics
+    of these measures for each video and train a classifier. Our analysis shows that
+    AI-generated videos exhibit significantly different curvature and distance patterns
+    compared to real videos. A lightweight classifier achieves state-of-the-art detection
+    performance (e.g., 97.17% accuracy and 98.63% AUROC on the VidProM benchmark),
+    substantially outperforming existing image- and video-based methods. ReStraV is
+    computationally efficient, it is offering a low-cost and effective detection solution.
+    This work provides new insights into using neural representation geometry for
+    AI-generated video detection.
+  authors: Christian Internò and Robert Geirhos and Markus Olhofer and Sunny Liu and
+    Barbara Hammer and David Klindt
+  citations: 0
+  journal: ''
+  title: AI-Generated Video Detection via Perceptual Straightening
+  url: https://arxiv.org/abs/2507.00583
+  year: 2025
+- abstract: The retina transforms patterns of light into visual feature representations
+    supporting behaviour. These representations are distributed across various types
+    of retinal ganglion cells (RGCs), whose spatial and temporal tuning properties
+    have been studied extensively in many model organisms, including the mouse. However,
+    it has been difficult to link the potentially nonlinear retinal transformations
+    of natural visual inputs to specific ethological purposes. Here, we discover a
+    nonlinear selectivity to chromatic contrast in an RGC type that allows the detection
+    of changes in visual context. We trained a convolutional neural network (CNN)
+    model on large-scale functional recordings of RGC responses to natural mouse movies,
+    and then used this model to search in silico for stimuli that maximally excite
+    distinct types of RGCs. This procedure predicted centre colour opponency in transient
+    suppressed-by-contrast (tSbC) RGCs, a cell type whose function is being debated.
+    We confirmed experimentally that these cells indeed responded very selectively
+    to Green-OFF, UV-ON contrasts. This type of chromatic contrast was characteristic
+    of transitions from ground to sky in the visual scene, as might be elicited by
+    head or eye movements across the horizon. Because tSbC cells performed best among
+    all RGC types at reliably detecting these transitions, we suggest a role for this
+    RGC type in providing contextual information (ie sky or ground) necessary for
+    the selection of appropriate behavioural responses to other stimuli, such as looming
+    objects. Our work showcases how a combination of experiments with natural stimuli
+    and computational modelling allows …
+  authors: Larissa Höfling and Klaudia P Szatko and Christian Behrens and Yuyao Deng
+    and Yongrong Qiu and David Klindt and Zachary Jessen and Gregory W Schwartz and
+    Matthias Bethge and Philipp Berens and Katrin Franke and Alexander S Ecker and
+    Thomas Euler
+  citations: 23
+  journal: ''
+  title: A chromatic feature detector in the retina signals visual context changes
+  url: https://elifesciences.org/articles/86860
+  year: 2024
+- abstract: Minimal experiments, such as head-fixed wheel-running and sleep, offer
+    experimental advantages but restrict the amount of observable behavior, making
+    it difficult to classify functional cell types. Arguably, the grid cell, and its
+    striking periodicity, would not have been discovered without the perspective provided
+    by free behavior in an open environment. Here, we show that by shifting the focus
+    from single neurons to populations, we change the minimal experimental complexity
+    required. We identify grid cell modules and show that the activity covers a similar,
+    stable toroidal state space during wheel running as in open field foraging. Trajectories
+    on grid cell tori correspond to single trial runs in virtual reality and path
+    integration in the dark, and the alignment of the representation rapidly shifts
+    with changes in experimental conditions. Thus, we provide a methodology to discover
+    and study complex internal representations …
+  authors: Erik Hermansen and David Klindt and Benjamin A Dunn
+  citations: 23
+  journal: ''
+  title: Uncovering 2-D toroidal representations in grid cell ensemble activity during
+    1-D behavior
+  url: https://www.nature.com/articles/s41467-024-49703-1
+  year: 2024
+- abstract: While the impressive performance of modern neural networks is often attributed
+    to their capacity to efficiently extract task-relevant features from data, the
+    mechanisms underlying this rich feature learning regime remain elusive, with much
+    of our theoretical understanding stemming from the opposing lazy regime. In this
+    work, we derive exact solutions to a minimal model that transitions between lazy
+    and rich learning, precisely elucidating how unbalanced layer-specific initialization
+    variances and learning rates determine the degree of feature learning. Our analysis
+    reveals that they conspire to influence the learning regime through a set of conserved
+    quantities that constrain and modify the geometry of learning trajectories in
+    parameter and function space. We extend our analysis to more complex linear models
+    with multiple neurons, outputs, and layers and to shallow nonlinear networks with
+    piecewise linear activation functions. In linear networks, rapid feature learning
+    only occurs from balanced initializations, where all layers learn at similar speeds.
+    While in nonlinear networks, unbalanced initializations that promote faster learning
+    in earlier layers can accelerate rich learning. Through a series of experiments,
+    we provide evidence that this unbalanced rich regime drives feature learning in
+    deep finite-width networks, promotes interpretability of early layers in CNNs,
+    reduces the sample complexity of learning hierarchical data, and decreases the
+    time to grokking in modular arithmetic. Our theory motivates further exploration
+    of unbalanced initializations to enhance efficient feature learning.
+  authors: Daniel Kunin and Allan Raventós and Clémentine Dominé and Feng Chen and
+    David Klindt and Andrew Saxe and Surya Ganguli
+  citations: 23
+  journal: ''
+  title: 'Get rich quick: exact solutions reveal how unbalanced initializations promote
+    rapid feature learning'
+  url: https://proceedings.neurips.cc/paper_files/paper/2024/hash/94074dd5a072d28ff75a76dabed43767-Abstract-Conference.html
+  year: 2024
+- abstract: Molecules are essential building blocks of life and their different conformations
+    (i.e., shapes) crucially determine the functional role that they play in living
+    organisms. Cryogenic Electron Microscopy (cryo-EM) allows for acquisition of large
+    image datasets of individual molecules. Recent advances in computational cryo-EM
+    have made it possible to learn latent variable models of conformation landscapes.
+    However, interpreting these latent spaces remains a challenge as their individual
+    dimensions are often arbitrary. The key message of our work is that this interpretation
+    challenge can be viewed as an Independent Component Analysis (ICA) problem where
+    we seek models that have the property of identifiability. That means, they have
+    an essentially unique solution, representing a conformational latent space that
+    separates the different degrees of freedom a molecule is equipped with in nature.
+    Thus, we aim to advance the computational field of cryo-EM beyond visualizations
+    as we connect it with the theoretical framework of (nonlinear) ICA and discuss
+    the need for identifiable models, improved metrics, and benchmarks. Moving forward,
+    we propose future directions for enhancing the disentanglement of latent spaces
+    in cryo-EM, refining evaluation metrics and exploring techniques that leverage
+    physics-based decoders of biomolecular systems. Moreover, we discuss how future
+    technological developments in time-resolved single particle imaging may enable
+    the application of nonlinear ICA models that can discover the true conformation
+    changes of molecules in nature. The pursuit of interpretable conformational latent
+    spaces will empower …
+  authors: David Klindt and Aapo Hyvärinen and Axel Levy and Nina Miolane and Frédéric
+    Poitevin
+  citations: 9
+  journal: ''
+  title: 'Towards interpretable Cryo-EM: disentangling latent spaces of molecular
+    conformations'
+  url: https://www.frontiersin.org/articles/10.3389/fmolb.2024.1393564/full
+  year: 2024
+- abstract: 'In today’s era, whatever we can measure at scale, we can optimize. So
+    far, measuring the interpretability of units in deep neural networks (DNNs) for
+    computer vision still requires direct human evaluation and is not scalable. As
+    a result, the inner workings of DNNs remain a mystery despite the remarkable progress
+    we have seen in their applications. In this work, we introduce the first scalable
+    method to measure the per-unit interpretability in vision DNNs. This method does
+    not require any human evaluations, yet its prediction correlates well with existing
+    human interpretability measurements. We validate its predictive power through
+    an interventional human psychophysics study. We demonstrate the usefulness of
+    this measure by performing previously infeasible experiments: (1) A large-scale
+    interpretability analysis across more than 70 million units from 835 computer
+    vision models, and (2) an extensive analysis of how units transform during training.
+    We find an anticorrelation between a model''s downstream classification performance
+    and per-unit interpretability, which is also observable during model training.
+    Furthermore, we see that a layer''s location and width influence its interpretability.'
+  authors: Roland S Zimmermann and David Klindt and Wieland Brendel
+  citations: 8
+  journal: ''
+  title: Measuring Mechanistic Interpretability at Scale Without Humans
+  url: https://openreview.net/forum?id=M8yBcvRvwn
+  year: 2024
+- abstract: 'Deep Learning is often depicted as a trio of data-architecture-loss.
+    Yet, recent Self Supervised Learning (SSL) solutions have introduced numerous
+    additional design choices, e.g., a projector network, positive views, or teacher-student
+    networks. These additions pose two challenges. First, they limit the impact of
+    theoretical studies that often fail to incorporate all those intertwined designs.
+    Second, they slow-down the deployment of SSL methods to new domains as numerous
+    hyper-parameters need to be carefully tuned. In this study, we bring forward the
+    surprising observation that--at least for pretraining datasets of up to a few
+    hundred thousands samples--the additional designs introduced by SSL do not contribute
+    to the quality of the learned representations. That finding not only provides
+    legitimacy to existing theoretical studies, but also simplifies the practitioner''s
+    path to SSL deployment in numerous small and medium scale settings. Our finding
+    answers a long-lasting question: the often-experienced sensitivity to training
+    settings and hyper-parameters encountered in SSL come from their design, rather
+    than the absence of supervised guidance.'
+  authors: Mark Ibrahim and David Klindt and Randall Balestriero
+  citations: 3
+  journal: ''
+  title: 'Occam''s Razor for Self Supervised Learning: What is Sufficient to Learn
+    Good Representations?'
+  url: https://arxiv.org/abs/2406.10743
+  year: 2024
+- abstract: A recent line of work has shown promise in using sparse autoencoders (SAEs)
+    to uncover interpretable features in neural network representations. However,
+    the simple linear-nonlinear encoding mechanism in SAEs limits their ability to
+    perform accurate sparse inference. Using compressed sensing theory, we prove that
+    an SAE encoder is inherently insufficient for accurate sparse inference, even
+    in solvable cases. We then decouple encoding and decoding processes to empirically
+    explore conditions where more sophisticated sparse inference methods outperform
+    traditional SAE encoders. Our results reveal substantial performance gains with
+    minimal compute increases in correct inference of sparse codes. We demonstrate
+    this generalises to SAEs applied to large language models, where more expressive
+    encoders achieve greater interpretability. This work opens new avenues for understanding
+    neural network representations and analysing large language model activations.
+  authors: Charles O'Neill and Alim Gumran and David Klindt
+  citations: 2
+  journal: ''
+  title: Compute Optimal Inference and Provable Amortisation Gap in Sparse Autoencoders
+  url: https://arxiv.org/abs/2411.13117
+  year: 2024
+- abstract: Self-Supervised Learning (SSL) methods often consist of elaborate pipelines
+    with hand-crafted data augmentations and computational tricks. However, it is
+    unclear what is the provably minimal set of building blocks that ensures good
+    downstream performance. The recently proposed instance discrimination method,
+    coined DIET, stripped down the SSL pipeline and demonstrated how a simple SSL
+    algorithm can work by predicting the sample index. Our work proves that DIET recovers
+    cluster-based latent representations, while successfully identifying the correct
+    cluster centroids in its classification head. We demonstrate the identifiability
+    of DIET on synthetic data adhering to and violating our assumptions, revealing
+    that the recovery of the cluster centroids is even more robust than the feature
+    recovery.
+  authors: Attila Juhos and Alice Bizeul and Patrik Reizinger and David Klindt and
+    Randall Balestriero and Mark Ibrahim and Julia E Vogt and Wieland Brendel
+  citations: 2
+  journal: ''
+  title: 'DIETing: Self-Supervised Learning with Instance Discrimination Learns Identifiable
+    Features'
+  url: https://openreview.net/forum?id=B59jV8cAQq
+  year: 2024
+- abstract: Grid cells in the mammalian brain are fundamental to spatial navigation,
+    and therefore crucial to how animals perceive and interact with their environment.
+    Traditionally, grid cells are thought support path integration through highly
+    symmetric hexagonal lattice firing patterns. However, recent findings show that
+    their firing patterns become distorted in the presence of significant spatial
+    landmarks such as rewarded locations. This introduces a novel perspective of dynamic,
+    subjective, and action-relevant interactions between spatial representations and
+    environmental cues. Here, we propose a practical and theoretical framework to
+    quantify and explain these interactions. To this end, we train path-integrating
+    recurrent neural networks (piRNNs) on a spatial navigation task, whose goal is
+    to predict the agent's position with a special focus on rewarded locations. Grid-like
+    neurons naturally emerge from the training of piRNNs, which allows us to investigate
+    how the two aspects of the task, space and reward, are integrated in their firing
+    patterns. We find that geometry, but not topology, of the grid cell population
+    code becomes distorted. Surprisingly, these distortions are global in the firing
+    patterns of the grid cells despite local changes in the reward. Our results indicate
+    that after training with location-specific reward information, the preserved representational
+    topology supports successful path integration, whereas the emergent heterogeneity
+    in individual responses due to global distortions may encode dynamically changing
+    environmental cues. By bridging the gap between computational models and the biological
+    reality of spatial navigation under reward …
+  authors: Francisco Acosta and Fatih Dinc and William Redman and Manu Madhav and
+    David Klindt and Nina Miolane
+  citations: 0
+  journal: ''
+  title: 'Global Distortions from Local Rewards: Neural Coding Strategies in Path-Integrating
+    Neural Systems'
+  url: https://proceedings.neurips.cc/paper_files/paper/2024/hash/b5cc526f12164b2144bb2e06f2e84864-Abstract-Conference.html
+  year: 2024
+- abstract: Delayed generalization, also known as ``grokking'', has emerged as a well-replicated
+    phenomenon in overparameterized neural networks. Recent theoretical works associated
+    grokking with the transition from lazy to rich learning regime, measured as the
+    change in the Neural Tangent Kernel (NTK) from its initial state. Here, we present
+    an empirical study on image classification tasks. Surprisingly, we demonstrate
+    that the NTK deviates from its initial state significantly before the onset of
+    grokking, i.e., before test performance increases, suggesting that rich learning
+    does occur before generalization. To explain this difference, we instead look
+    at the representational geometry of the network, and find that grokking coincides
+    in time with a rapid increase in manifold capacity and improved effective geometry
+    metrics. Notably, this sharp transition is absent when generalization is not delayed.
+    Our findings on real data show that lazy and rich training regimes can become
+    decoupled from sudden generalization. In contrast, changes in representational
+    geometry remain tightly linked and may therefore better explain grokking dynamics.
+  authors: Xingyu Zheng and Kyle Daruwalla and Ari Benjamin and David Klindt
+  citations: 0
+  journal: ''
+  title: Delays in generalization match delayed changes in representational geometry
+  url: https://openreview.net/forum?id=1ae108kHk2
+  year: 2024
+- abstract: ''
+  authors: Liam Storan and Nikos Karantzas and David Klindt and Konstantin Friedrich
+    Willeke and Dongrui Deng and Michał Gerasimiuk and Xaq Pitkow and Katrin Franke
+    and Nina Miolane and Sophia Sanborn and Andreas S Tolias
+  citations: 0
+  journal: ''
+  title: Emergent Geometry in Neural Representations of the Visual World
+  url: ''
+  year: 2024
+- abstract: Neural system identification aims at learning the response function of
+    neurons to arbitrary stimuli using experimentally recorded data, but typically
+    does not leverage normative principles such as efficient coding of natural environments.
+    Visual systems, however, have evolved to efficiently process input from the natural
+    environment. Here, we present a normative network regularization for system identification
+    models by incorporating, as a regularizer, the efficient coding hypothesis, which
+    states that neural response properties of sensory representations are strongly
+    shaped by the need to preserve most of the stimulus information with limited resources.
+    Using this approach, we explored if a system identification model can be improved
+    by sharing its convolutional filters with those of an autoencoder which aims to
+    efficiently encode natural stimuli. To this end, we built a hybrid model to predict
+    the responses of retinal neurons to noise stimuli. This approach did not only
+    yield a higher performance than the “stand-alone” system identification model,
+    it also produced more biologically plausible filters, meaning that they more closely
+    resembled neural representation in early visual systems. We found these results
+    applied to retinal responses to different artificial stimuli and across model
+    architectures. Moreover, our normatively regularized model performed particularly
+    well in predicting responses of direction-of-motion sensitive retinal neurons.
+    The benefit of natural scene statistics became marginal, however, for predicting
+    the responses to natural movies. In summary, our results indicate that efficiently
+    encoding environmental inputs can improve system …
+  authors: Yongrong Qiu and David Klindt and Klaudia P Szatko and Dominic Gonschorek
+    and Larissa Hoefling and Timm Schubert and Laura Busse and Matthias Bethge and
+    Thomas Euler
+  citations: 11
+  journal: ''
+  title: Efficient coding of natural scenes improves neural system identification
+  url: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011037
+  year: 2023
+- abstract: Systems neuroscience relies on two complementary views of neural data,
+    characterized by single neuron tuning curves and analysis of population activity.
+    These two perspectives combine elegantly in neural latent variable models that
+    constrain the relationship between latent variables and neural activity, modeled
+    by simple tuning curve functions. This has recently been demonstrated using Gaussian
+    processes, with applications to realistic and topologically relevant latent manifolds.
+    Those and previous models, however, missed crucial shared coding properties of
+    neural populations. We propose feature sharing across neural tuning curves which
+    significantly improves performance and helps optimization. We also propose a solution
+    to the ensemble detection problem, where different groups of neurons, i.e., ensembles,
+    can be modulated by different latent manifolds. Achieved through a soft clustering
+    of neurons during training, this allows for the separation of mixed neural populations
+    in an unsupervised manner. These innovations lead to more interpretable models
+    of neural population activity that train well and perform better even on mixtures
+    of complex latent manifolds. Finally, we apply our method on a recently published
+    grid cell dataset, and recover distinct ensembles, infer toroidal latents and
+    predict neural tuning curves in a single integrated modeling framework.
+  authors: Martin Bjerke and Lukas Schott and Kristopher T Jensen and Claudia Battistin
+    and David Klindt and Benjamin A Dunn
+  citations: 9
+  journal: ''
+  title: Understanding neural coding on latent manifolds by sharing features and dividing
+    ensembles
+  url: https://arxiv.org/abs/2210.03155
+  year: 2023
+- abstract: Single neurons in neural networks are often interpretable in that they
+    represent individual, intuitively meaningful features. However, many neurons exhibit
+    $\textit{mixed selectivity}$, i.e., they represent multiple unrelated features.
+    A recent hypothesis proposes that features in deep networks may be represented
+    in $\textit{superposition}$, i.e., on non-orthogonal axes by multiple neurons,
+    since the number of possible interpretable features in natural data is generally
+    larger than the number of neurons in a given network. Accordingly, we should be
+    able to find meaningful directions in activation space that are not aligned with
+    individual neurons. Here, we propose (1) an automated method for quantifying visual
+    interpretability that is validated against a large database of human psychophysics
+    judgments of neuron interpretability, and (2) an approach for finding meaningful
+    directions in network activation space. We leverage these methods to discover
+    directions in convolutional neural networks that are more intuitively meaningful
+    than individual neurons, as we confirm and investigate in a series of analyses.
+    Moreover, we apply the same method to three recent datasets of visual neural responses
+    in the brain and find that our conclusions largely transfer to real neural data,
+    suggesting that superposition might be deployed by the brain. This also provides
+    a link with disentanglement and raises fundamental questions about robust, efficient
+    and factorized representations in both artificial and biological neural systems.
+  authors: David Klindt and Sophia Sanborn and Francisco Acosta and Frédéric Poitevin
+    and Nina Miolane
+  citations: 7
+  journal: ''
+  title: Identifying interpretable visual features in artificial and biological neural
+    systems
+  url: https://arxiv.org/abs/2310.11431
+  year: 2023
+- abstract: We investigate several popular methods for quantifying the similarity
+    between neural representations applied to a large-scale fMRI dataset of human
+    ventral visual cortex. We focus on representational geometry as a framework for
+    comparing various functionally-defined high-level regions of interest (ROIs) in
+    the ventral stream. We benchmark Representational Similarity Analysis, Centered
+    Kernel Alignment, and Generalized Shape Metrics. We explore how well the geometry
+    implied by pairwise representational dissimilarity scores produced by each method
+    matches the 2D anatomical geometry of visual cortex. Our results suggest that
+    while these methods yield similar outcomes, Shape Metrics provide distances between
+    representations whose relation to the anatomical geometry is most invariant across
+    subjects. Our work establishes a criterion with which to compare methods for quantifying
+    representational similarity with implications for studying the anatomical organization
+    of high-level ventral visual cortex.
+  authors: Francisco Acosta and Colin Conwell and Sophia Sanborn and David Klindt
+    and Nina Miolane
+  citations: 6
+  journal: ''
+  title: Evaluation of Representational Similarity Scores Across Human Visual Cortex
+  url: https://openreview.net/forum?id=LhV3Ex8fky
+  year: 2023
+- abstract: The modelling framework of neural algorithmic reasoning (Veličković &
+    Blundell, 2021) postulates that a continuous neural network may learn to emulate
+    the discrete reasoning steps of a symbolic algorithm. We investigate the underlying
+    hypothesis in the most simple conceivable scenario – the addition of real numbers.
+    Our results show that two layer neural networks fail to learn the structure of
+    the task, despite containing multiple solutions of the true function within their
+    hypothesis class. Growing the network’s width leads to highly complex error regions
+    in the input space. Moreover, we find that the network fails to generalise with
+    increasing severity i) in the training domain, ii) outside of the training domain
+    but within its convex hull, and iii) outside the training domain’s convex hull.
+    This behaviour can be emulated with Gaussian process regressors that use radial
+    basis function kernels of decreasing length scale. Classical results establish
+    an equivalence between Gaussian processes and infinitely wide neural networks.
+    We demonstrate a tight linkage between the scaling of a network weights’ standard
+    deviation and its effective length scale on a sinusoidal regression problem, suggesting
+    simple modifications to control the length scale of the function learned by a
+    neural network and, thus, its smoothness. This has important applications for
+    the different generalisation scenarios suggested above, but it also suggests a
+    partial remedy to the brittleness of neural network predictions as exposed by
+    adversarial examples. We demonstrate the gains in adversarial robustness that
+    our modification achieves on a standard classification problem of handwritten
+    …
+  authors: David Klindt
+  citations: 4
+  journal: ''
+  title: Controlling neural network smoothness for neural algorithmic reasoning
+  url: https://openreview.net/forum?id=JnsGy9uWtI
+  year: 2023
+- abstract: This paper presents the computational challenge on differential geometry
+    and topology that was hosted within the ICLR 2022 workshop “Geometric and Topo-logical
+    Representation Learning”. The competition asked participants to provide implementations
+    of machine learning algorithms on manifolds that would respect the API of the
+    open-source software Geomstats (manifold part) and Scikit-Learn (machine learning
+    part) or PyTorch. The challenge attracted seven teams in its two month duration.
+    This paper describes the design of the challenge and summarizes its main findings.
+  authors: Adele Myers and Saiteja Utpala and Shubham Talbar and Sophia Sanborn and
+    Christian Shewmake and Claire Donnat and Johan Mathe and Rishi Sonthalia and Xinyue
+    Cui and Tom Szwagier and Arthur Pignet and Andri Bergsson and Søren Hauberg and
+    Dmitriy Nielsen and Stefan Sommer and David Klindt and Erik Hermansen and Melvin
+    Vaupel and Benjamin Dunn and Jeffrey Xiong and Noga Aharony and Itsik Pe’er and
+    Felix Ambellan and Martin Hanik and Esfandiar Nava-Yazdani and Christoph von Tycowicz
+    and Nina Miolane
+  citations: 4
+  journal: ''
+  title: 'ICLR 2022 challenge for computational geometry & topology: Design and results'
+  url: https://proceedings.mlr.press/v196/myers22a.html
+  year: 2022
+- abstract: Modern neural recordings comprise thousands of neurons recorded at millisecond
+    precision. An important step in analyzing these recordings is to identify neural
+    ensembles—subsets of neurons that represent a subsystem of specific functionality
+    A famous example in the mammalian brain is that of the grid cells, which separate
+    into ensembles of different spatial resolution. Recent work demonstrated that
+    recordings from individual ensembles exhibit the topological signature of a torus.
+    This is obscured, however, in combined recordings from multiple ensembles. Inspired
+    by this observation, we introduce a topological ensemble detection algorithm that
+    is capable of unsupervised identification of neural ensembles based on their topological
+    signatures. This identification is achieved by optimizing a loss function that
+    captures the assumed topological signature of the ensemble and opens up exciting
+    possibilities, eg, searching for cell ensembles in prefrontal cortex, which may
+    represent cognitive maps on more conceptual spaces than grid cells.
+  authors: David Klindt and Erik Hermansen and Melvin Vaupel and Benjamin Dunn
+  citations: 2
+  journal: ''
+  title: Topological Ensemble Detection with Differentiable Yoking
+  url: https://proceedings.mlr.press/v197/klindt23a.html
+  year: 2022
+- abstract: The tremendous success of generative models in recent years raises the
+    question whether they can also be used to perform classification. Generative models
+    have been used as adversarially robust classifiers on simple datasets such as
+    MNIST, but this robustness has not been observed on more complex datasets like
+    CIFAR-10. Additionally, on natural image datasets, previous results have suggested
+    a trade-off between the likelihood of the data and classification accuracy. In
+    this work, we investigate score-based generative models as classifiers for natural
+    images. We show that these models not only obtain competitive likelihood values
+    but simultaneously achieve state-of-the-art classification accuracy for generative
+    classifiers on CIFAR-10. Nevertheless, we find that these models are only slightly,
+    if at all, more robust than discriminative baseline models on out-of-distribution
+    tasks based on common image corruptions. Similarly and contrary to prior results,
+    we find that score-based are prone to worst-case distribution shifts in the form
+    of adversarial perturbations. Our work highlights that score-based generative
+    models are closing the gap in classification accuracy compared to standard discriminative
+    models. While they do not yet deliver on the promise of adversarial and out-of-domain
+    robustness, they provide a different approach to classification that warrants
+    further research.
+  authors: Roland S Zimmermann and Lukas Schott and Yang Song and Benjamin A Dunn
+    and David Klindt
+  citations: 87
+  journal: ''
+  title: Score-based generative classifiers
+  url: https://arxiv.org/abs/2110.00473
+  year: 2021
+- abstract: Pressures for survival make sensory circuits adapted to a species' natural
+    habitat and its behavioral challenges. Thus, to advance our understanding of the
+    visual system, it is essential to consider an animal's specific visual environment
+    by capturing natural scenes, characterizing their statistical regularities, and
+    using them to probe visual computations. Mice, a prominent visual system model,
+    have salient visual specializations, being dichromatic with enhanced sensitivity
+    to green and UV in the dorsal and ventral retina, respectively. However, the characteristics
+    of their visual environment that likely have driven these adaptations are rarely
+    considered. Here, we built a UV-green-sensitive camera to record footage from
+    mouse habitats. This footage is publicly available as a resource for mouse vision
+    research. We found chromatic contrast to greatly diverge in the upper, but not
+    the lower, visual field. Moreover, training a …
+  authors: Yongrong Qiu and Zhijian Zhao and David Klindt and Magdalena Kautzky and
+    Klaudia P Szatko and Frank Schaeffel and Katharina Rifai and Katrin Franke and
+    Laura Busse and Thomas Euler
+  citations: 84
+  journal: ''
+  title: Natural environment statistics in the upper and lower visual field are reflected
+    in mouse retinal specializations
+  url: https://www.cell.com/current-biology/fulltext/S0960-9822(21)00676-X
+  year: 2021
+- abstract: Integrating data from multiple experiments is common practice in systems
+    neuroscience but it requires inter-experimental variability to be negligible compared
+    to the biological signal of interest. This requirement is rarely fulfilled; systematic
+    changes between experiments can drastically affect the outcome of complex analysis
+    pipelines. Modern machine learning approaches designed to adapt models across
+    multiple data domains offer flexible ways of removing inter-experimental variability
+    where classical statistical methods often fail. While applications of these methods
+    have been mostly limited to single-cell genomics, in this work, we develop a theoretical
+    framework for domain adaptation in systems neuroscience. We implement this in
+    an adversarial optimization scheme that removes inter-experimental variability
+    while preserving the biological signal. We compare our method to previous approaches
+    on a large-scale dataset of two-photon imaging recordings of retinal bipolar cell
+    responses to visual stimuli. This dataset provides a unique benchmark as it contains
+    biological signal from well-defined cell types that is obscured by large inter-experimental
+    variability. In a supervised setting, we compare the generalization performance
+    of cell type classifiers across experiments, which we validate with anatomical
+    cell type distributions from electron microscopy data. In an unsupervised setting,
+    we remove inter-experimental variability from the data which can then be fed into
+    arbitrary downstream analyses. In both settings, we find that our method achieves
+    the best trade-off between removing inter-experimental variability and preserving
+    biological signal …
+  authors: Dominic Gonschorek and Larissa Höfling and Klaudia P Szatko and Katrin
+    Franke and Timm Schubert and Benjamin Dunn and Philipp Berens and David Klindt
+    and Thomas Euler
+  citations: 12
+  journal: ''
+  title: Removing inter-experimental variability from functional data in systems neuroscience
+  url: https://proceedings.neurips.cc/paper_files/paper/2021/hash/1e5eeb40a3fce716b244599862fd2200-Abstract.html
+  year: 2021
+- abstract: Although the processing of visual information in the retina has been studied
+    in detail, the underlying functional connectivity is not yet completely understood.
+    While many specific circuits are well-characterized (eg the rod photoreceptor
+    pathway), a comprehensive picture of how these microcircuits work together to
+    form the retinal network is still lacking. Furthermore, connectomic information,
+    which could help dissect the functional underpinnings of the retina, is not yet
+    fully leveraged. The integration of different datasets and data sources to (computational)
+    models is a key challenge to elucidate the processing of visual information in
+    the retina. A step towards a comprehensive understanding of the retinal network
+    was made in a recent publication [1], which suggests a biophysically-constrained
+    bipolar and amacrine cell network model (BCN model) of light processing in the
+    mouse inner retina, enabling in silico experiments. Here, we extended this model
+    to predict the responses of previously characterized mouse retinal ganglion cell
+    (RGC) types to full-field light stimulation [2]. Specifically, we tested how bipolar
+    cell glutamate release can be combined in an additional linear nonlinear model
+    to predict RGC output (BCN-LN). We show that recordings of full-field stimulation
+    combined with mechanistically detailed modelling allowed us to predict connectivity
+    between cell types, as well as to investigate the role of inhibitory feedback
+    and feedforward AC modulation. In summary, this work shows how a machine-learning
+    approach informed by biological structures can produce interpretable and accurate
+    predictions about neural connectivity and circuit …
+  authors: David A Klindt* and Cornelius Schröder* and Anna Vlasits and Katrin Franke
+    and Philipp Berens and Thomas Euler
+  citations: 1
+  journal: ''
+  title: Modelling Functional Wiring and Processing from Retinal Bipolar to Ganglion
+    Cells
+  url: https://coschroeder.github.io/pdfs/BC_RGC_Cosyne2021_for_publication.pdf
+  year: 2021
+- abstract: ''
+  authors: David Klindt
+  citations: 0
+  journal: ''
+  title: Identifying the elements of visual processing
+  url: https://scholar.google.com/scholar?cluster=1738782617929797478&hl=en&oi=scholarr
+  year: 2021
+- abstract: ''
+  authors: Dominic Gonschorek and Larissa Höfling and Klaudia Szatko and Katrin Franke
+    and Timm Schubert and Benjamin Dunn and Philipp Berens and David Klindt and Thomas
+    Euler
+  citations: 0
+  journal: ''
+  title: Simulated and recorded responses of mouse retinal bipolar cells to the chirp
+    stimulus
+  url: ''
+  year: 2021
+- abstract: We construct an unsupervised learning model that achieves nonlinear disentanglement
+    of underlying factors of variation in naturalistic videos. Previous work suggests
+    that representations can be disentangled if all but a few factors in the environment
+    stay constant at any point in time. As a result, algorithms proposed for this
+    problem have only been tested on carefully constructed datasets with this exact
+    property, leaving it unclear whether they will transfer to natural scenes. Here
+    we provide evidence that objects in segmented natural movies undergo transitions
+    that are typically small in magnitude with occasional large jumps, which is characteristic
+    of a temporally sparse distribution. We leverage this finding and present SlowVAE,
+    a model for unsupervised representation learning that uses a sparse prior on temporally
+    adjacent observations to disentangle generative factors without any assumptions
+    on the number of changing factors. We provide a proof of identifiability and show
+    that the model reliably learns disentangled representations on several established
+    benchmark datasets, often surpassing the current state-of-the-art. We additionally
+    demonstrate transferability towards video datasets with natural dynamics, Natural
+    Sprites and KITTI Masks, which we contribute as benchmarks for guiding disentanglement
+    research towards more natural data domains.
+  authors: David Klindt* and Lukas Schott* and Yash Sharma* and Ivan Ustyuzhaninov
+    and Wieland Brendel and Matthias Bethge and Dylan Paiton
+  citations: 164
+  journal: ''
+  title: Towards Nonlinear Disentanglement in Natural Data with Temporal Sparse Coding
+  url: https://arxiv.org/abs/2007.10930
+  year: 2020
+- abstract: The retina decomposes visual stimuli into parallel channels that encode
+    different features of the visual environment. Central to this computation is the
+    synaptic processing in a dense layer of neuropil, the so-called inner plexiform
+    layer (IPL). Here, different types of bipolar cells stratifying at distinct depths
+    relay the excitatory feedforward drive from photoreceptors to amacrine and ganglion
+    cells. Current experimental techniques for studying processing in the IPL do not
+    allow imaging the entire IPL simultaneously in the intact tissue. Here, we extend
+    a two-photon microscope with an electrically tunable lens allowing us to obtain
+    optical vertical slices of the IPL, which provide a complete picture of the response
+    diversity of bipolar cells at a “single glance”. The nature of these axial recordings
+    additionally allowed us to isolate and investigate batch effects, i.e. inter-experimental
+    variations resulting in systematic differences in …
+  authors: Zhijian Zhao* and David Klindt* and André Maia Chagas and Klaudia P Szatko
+    and Luke Rogerson and Dario A Protti and Christian Behrens and Deniz Dalkara and
+    Timm Schubert and Matthias Bethge and Katrin Franke and Philipp Berens and Alexander
+    S Ecker and Thomas Euler
+  citations: 31
+  journal: ''
+  title: The temporal structure of the inner retina at a single glance
+  url: https://www.nature.com/articles/s41598-020-60214-z
+  year: 2020
+- abstract: Visual processing in the retina has been studied in great detail at all
+    levels such that a comprehensive picture of the retina's cell types and the many
+    neural circuits they form is emerging. However, the currently best performing
+    models of retinal function are black-box CNN models which are agnostic to such
+    biological knowledge. In particular, these models typically neglect the role of
+    the many inhibitory circuits involving amacrine cells and the biophysical mechanisms
+    underlying synaptic release. Here, we present a computational model of temporal
+    processing in the inner retina, including inhibitory feedback circuits and realistic
+    synaptic release mechanisms. Fit to the responses of bipolar cells, the model
+    generalized well to new stimuli including natural movie sequences, performing
+    on par with or better than a benchmark black-box model. In pharmacology experiments,
+    the model replicated in silico the effect of blocking specific amacrine cell populations
+    with high fidelity, indicating that it had learned key circuit functions. Also,
+    more in depth comparisons showed that connectivity patterns learned by the model
+    were well matched to connectivity patterns extracted from connectomics data. Thus,
+    our model provides a biologically interpretable data-driven account of temporal
+    processing in the inner retina, filling the gap between purely black-box and detailed
+    biophysical modeling.
+  authors: Cornelius Schröder* and David Klindt* and Sarah Strauss and Katrin Franke
+    and Matthias Bethge and Thomas Euler and Philipp Berens
+  citations: 16
+  journal: ''
+  title: 'System Identification with Biophysical Constraints: A Circuit Model of the
+    Inner Retina'
+  url: https://proceedings.neurips.cc/paper/2020/hash/b139e104214a08ae3f2ebcce149cdf6e-Abstract.html
+  year: 2020
+- abstract: ''
+  authors: David Klindt and Johannes Ballé and Jonathan Shlens and Eero Simoncelli
+  citations: 0
+  journal: ''
+  title: Unsupervised learning of image manifolds with mutual information
+  url: ''
+  year: 2020
+- abstract: ''
+  authors: David Klindt and Luke E Rogerson and Zhijian Zhao and Katrin Franke and
+    Dmitry Kobak and Alexander Ecker and Philipp Berens and Thomas Euler and Klaudia
+    Szatko and Matthias Bethge
+  citations: 0
+  journal: ''
+  title: Adjusting for batch effects in two photon imaging recordings of the retinal
+    inner plexiform layer
+  url: ''
+  year: 2019
+- abstract: 'Neuroscientists classify neurons into different types that perform similar
+    computations at different locations in the visual field. Traditional methods for
+    neural system identification do not capitalize on this separation of “what” and
+    “where”. Learning deep convolutional feature spaces that are shared among many
+    neurons provides an exciting path forward, but the architectural design needs
+    to account for data limitations: While new experimental techniques enable recordings
+    from thousands of neurons, experimental time is limited so that one can sample
+    only a small fraction of each neuron''s response space. Here, we show that a major
+    bottleneck for fitting convolutional neural networks (CNNs) to neural data is
+    the estimation of the individual receptive field locations–a problem that has
+    been scratched only at the surface thus far. We propose a CNN architecture with
+    a sparse readout layer factorizing the spatial (where) and feature (what) dimensions.
+    Our network scales well to thousands of neurons and short recordings and can be
+    trained end-to-end. We evaluate this architecture on ground-truth data to explore
+    the challenges and limitations of CNN-based system identification. Moreover, we
+    show that our network model outperforms current state-of-the art system identification
+    models of mouse primary visual cortex.'
+  authors: David Klindt* and Alexander S Ecker* and Thomas Euler and Matthias Bethge
+  citations: 155
+  journal: ''
+  title: Neural system identification for large populations separating" what" and"
+    where"
+  url: https://proceedings.neurips.cc/paper/2017/hash/8c249675aea6c3cbd91661bbae767ff1-Abstract.html
+  year: 2017
+- abstract: Mentalizing or Theory of Mind (ToM), i.e., the ability to recognize what
+    people think or feel, is a crucial component of human social intelligence. It
+    has been recently proposed that ToM can be decomposed into automatic and controlled
+    neurocognitive components, where only the latter engage executive functions (e.g.,
+    working memory, inhibitory control and task switching). Critical here is the notion
+    that such dual processes are expected to follow different developmental dynamics.
+    In this work, we provide novel experimental evidence for this notion. We report
+    data gathered from about thirty thousand participants of a massive web poll of
+    people's cognitive skills, which included ToM and executive functions. We show
+    that although the maturation of executive functions occurs in synchrony (around
+    20 years of age), this is not the case for different mentalizing competences,
+    which either mature before (for elementary ToM …
+  authors: David Klindt and Marie Devaine and Jean Daunizeau
+  citations: 50
+  journal: ''
+  title: Does the way we read others' mind change over the lifespan? Insights from
+    a massive web poll of cognitive skills from childhood to late adulthood
+  url: https://www.sciencedirect.com/science/article/pii/S0010945216302544
+  year: 2017
