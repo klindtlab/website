@@ -1,7 +1,7 @@
 title: "Klindt Lab - NeuroAI Research"
 description: "Exploring the intersection of neuroscience and artificial intelligence"
-baseurl: ""
-url: "https://your-username.github.io"
+baseurl: "/website"
+url: "https://klindtlab.github.io"
 repository: "your-username/your-username.github.io"
 
 # Build settings

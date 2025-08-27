@@ -60,6 +60,31 @@
   &:hover {
     transform: translateY(-5px);
   }
+  
+  h3 {
+    margin: 1rem 0 0.5rem 0;
+    
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .member-title {
+    font-weight: 600;
+    color: #666;
+    margin: 0.25rem 0;
+  }
+  
+  .member-email {
+    font-size: 0.9em;
+    color: #888;
+    margin: 0.5rem 0 1rem 0;
+  }
 }
 
 .team-photo {
@@ -70,6 +95,29 @@
   margin-bottom: 1rem;
   border: 3px solid white;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.member-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.member-link {
+  padding: 0.4rem 0.8rem;
+  background: white;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.85em;
+  border: 1px solid var(--primary-color);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: var(--primary-color);
+    color: white;
+  }
 }
 
 // Research highlights
@@ -132,6 +180,133 @@ details {
   .pub-links a {
     display: block;
     margin: 0.25rem 0;
+  }
+}
+
+// Hero section styling
+.hero-section {
+  margin: 2rem 0 3rem 0;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #ffffff 100%);
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  
+  h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .hero-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  
+  &.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    
+    &:hover {
+      background: #1e4085;
+      transform: translateY(-2px);
+    }
+  }
+  
+  &.btn-secondary {
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    
+    &:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.hero-image {
+  flex: 0 0 300px;
+  text-align: center;
+  
+  .team-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  .photo-caption {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+  }
+}
+
+// Responsive design for hero
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-image {
+    flex: none;
+    
+    .team-photo {
+      max-width: 250px;
+    }
+  }
+  
+  .hero-buttons {
+    justify-content: center;
   }
 }
 

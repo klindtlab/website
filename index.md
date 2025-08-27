@@ -3,9 +3,22 @@ layout: home
 title: "Welcome to Klindt Lab"
 ---
 
-# NeuroAI Research at Klindt Lab
-
-We explore the fascinating intersection of neuroscience and artificial intelligence, developing computational models to understand how the brain processes information and how AI systems can be inspired by neural mechanisms.
+<div class="hero-section">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>NeuroAI Research at Klindt Lab</h1>
+      <p class="hero-description">We explore the fascinating intersection of neuroscience and artificial intelligence, developing computational models to understand how the brain processes information and how AI systems can be inspired by neural mechanisms.</p>
+      <div class="hero-buttons">
+        <a href="/research/" class="btn btn-primary">Our Research</a>
+        <a href="/team/" class="btn btn-secondary">Meet the Team</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="/assets/images/team/summer2025.jpeg" alt="Klindt Lab Team" class="team-photo">
+      <p class="photo-caption">The Klindt Lab Team</p>
+    </div>
+  </div>
+</div>
 
 ## Latest News
 

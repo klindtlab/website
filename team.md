@@ -8,20 +8,32 @@ permalink: /team/
 
 ## Principal Investigator
 
+<div class="team-grid">
 {% for member in site.team %}
   {% if member.role == "PI" %}
-  ### {{ member.name }}
-  **{{ member.title }}**
-  
-  {{ member.bio }}
-  
-  **Contact**: {{ member.email }}
-  
-  {% if member.website %}[Personal Website]({{ member.website }}){% endif %}
-  {% if member.twitter %}[Twitter](https://twitter.com/{{ member.twitter }}){% endif %}
-  {% if member.github %}[GitHub](https://github.com/{{ member.github }}){% endif %}
+  <div class="team-member">
+    {% if member.image %}
+      <img src="{{ member.image | relative_url }}" alt="{{ member.name }}" class="team-photo">
+    {% endif %}
+    <h3><a href="{{ member.url | relative_url }}">{{ member.name }}</a></h3>
+    <p class="member-title">{{ member.title }}</p>
+    <p class="member-email">{{ member.email }}</p>
+    
+    <div class="member-links">
+      {% if member.website %}
+        <a href="{{ member.website }}" target="_blank" class="member-link">Website</a>
+      {% endif %}
+      {% if member.github %}
+        <a href="https://github.com/{{ member.github }}" target="_blank" class="member-link">GitHub</a>
+      {% endif %}
+      {% if member.twitter %}
+        <a href="https://twitter.com/{{ member.twitter }}" target="_blank" class="member-link">Twitter</a>
+      {% endif %}
+    </div>
+  </div>
   {% endif %}
 {% endfor %}
+</div>
 
 ## Postdoctoral Researchers
 
