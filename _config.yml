@@ -1,0 +1,43 @@
+title: "Klindt Lab - NeuroAI Research"
+description: "Exploring the intersection of neuroscience and artificial intelligence"
+baseurl: ""
+url: "https://your-username.github.io"
+repository: "your-username/your-username.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  team:
+    output: true
+    permalink: /:collection/:name/
+  publications:
+    output: true
+    permalink: /:collection/:name/
+  news:
+    output: true
+    permalink: /:collection/:year/:month/:day/:title/
+
+# Navigation
+header_pages:
+  - index.md
+  - about.md
+  - research.md
+  - team.md
+  - publications.md
+  - news.md
+
+# Social links
+github_username: your-lab-github
+twitter_username: your-lab-twitter
+email: contact@klindtlab.org
+
+# Google Analytics (optional)
+# google_analytics: UA-XXXXXXXX-X

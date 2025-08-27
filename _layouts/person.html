@@ -1,0 +1,114 @@
+---
+layout: default
+---
+
+<div class="person-profile">
+  {% if page.image %}
+  <div class="person-image">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.name }}" class="profile-photo">
+  </div>
+  {% endif %}
+  
+  <div class="person-info">
+    <h1>{{ page.name }}</h1>
+    <h2>{{ page.title }}</h2>
+    
+    <div class="contact-links">
+      {% if page.email %}
+        <a href="mailto:{{ page.email }}" class="contact-link">📧 Email</a>
+      {% endif %}
+      
+      {% if page.website %}
+        <a href="{{ page.website }}" class="contact-link" target="_blank">🌐 Website</a>
+      {% endif %}
+      
+      {% if page.github %}
+        <a href="https://github.com/{{ page.github }}" class="contact-link" target="_blank">💻 GitHub</a>
+      {% endif %}
+      
+      {% if page.twitter %}
+        <a href="https://twitter.com/{{ page.twitter }}" class="contact-link" target="_blank">🐦 Twitter</a>
+      {% endif %}
+      
+      {% if page.scholar %}
+        <a href="{{ page.scholar }}" class="contact-link" target="_blank">🎓 Scholar</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="person-content">
+  {{ content }}
+</div>
+
+<style>
+.person-profile {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.person-image {
+  flex: 0 0 200px;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+}
+
+.person-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.person-info h1 {
+  margin: 0;
+  color: #333;
+}
+
+.person-info h2 {
+  margin: 0.5rem 0 1rem 0;
+  color: #666;
+  font-weight: normal;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-link {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #f0f0f0;
+  border-radius: 5px;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.contact-link:hover {
+  background: #e0e0e0;
+}
+
+.person-content {
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .person-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .person-image {
+    flex: none;
+    align-self: center;
+  }
+}
+</style>
